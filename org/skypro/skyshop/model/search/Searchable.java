@@ -10,9 +10,9 @@ public interface Searchable {
 
     String objectName();
 
+    UUID getId();
+
     default String getStringRepresentation() {
         return '\"' + "имя " + searchTerm() + " -объекта - тип " + contentType() + " -объекта" + '\"';
     }
-
-    UUID getId();
 }
