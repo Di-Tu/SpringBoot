@@ -34,6 +34,10 @@ public class StorageService {
         return this.articleRepository;
     }
 
+    public Optional<Product> getProductById(UUID id) {
+        return Optional.ofNullable(this.productRepository.get(id));
+    }
+
     private void libraryProducts() {
         Product orange = new SimpleProduct("Апельсин", 130);
         Product apple = new SimpleProduct("Яблоко", 72);
